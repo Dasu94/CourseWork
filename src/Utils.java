@@ -5,17 +5,17 @@ import java.util.Scanner;
  */
 public class Utils {
 
-    //To get the user's input.
-    static Scanner sc = new Scanner(System.in);
+	//To get the user's input.
+	static Scanner sc = new Scanner(System.in);
 
-    //To store the input value in a string.
-    public static String scannerUserInput(){
+	//To store the input value in a string.
+	public static String scannerUserInput() {
 
-        String userInput= sc.nextLine();
+		String userInput = sc.nextLine();
 
-        //This will return the user input.
-        return userInput;
+		//This will return the user input.
+		return userInput;
 
-    }
+	}
 
 }

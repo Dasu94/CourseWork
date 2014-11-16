@@ -1,40 +1,28 @@
+import java.util.ArrayList;
+
 /**
  * Created by Dasuni on 11/13/2014.
  */
 public class Main {
 
-    public static void main(String[] args) {
-//        PremierLeagueManager print = new PremierLeagueManager();
-//        print.welcomeNote();
-//        print.userSelectionMenu();
-
-        FootballPlayer mc = new FootballPlayer("das","dd","ss",7);
 
 
+	public static void main(String[] args) {
 
-        DBAccess so = new DBAccess();
+        //To get the default clubs
+		DBAccess dbAccess = new DBAccess();
 
-        try{
-            so.setJavaObject(mc);
-            so.saveFootballPlayer();
-            System.out.println("saved");
+		try {
+			dbAccess.defaultClubs();
+			dbAccess.getFtClubObject();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
+		PremierLeagueManager print = new PremierLeagueManager();
+		print.welcomeNote();
+		print.userSelectionMenu();
 
-        try{
-            so.getFtPlayerObject();
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-
-
-    }
-
+	}
 
 }
